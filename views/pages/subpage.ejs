@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/subpage.css"/>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Detials</h1>
+
+        <table action="/rectangles" method="get">
+            <h1><%= name %></h1>
+            <tr>
+                <td>name</td>
+                <td><%= name %></td>
+            </tr>
+            <tr>
+                <td>Width</td>
+                <td><%= width %></td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td><%= height %></td>
+            <tr>
+                <td>Color</td>
+                <td><%= color %></td>
+            </tr>
+        </table>
+
+        <form action="/rectangles" method="get">
+            <button type="submit">Delete</button>
+        </form>
+
+        <form action="return",method="get">
+            <button type="submit">Go Back</button>
+        </form>
+
+        <form action="/subpage" method="post">
+            <input type="text" name="getname" id="name" placeholder="Name"/>
+            <input type="text" name="getwidth" id="width" placeholder="Width"/>
+            <input type="text" name="getheight" id="height" placeholder="Height"/>
+            <input type="text" name="getcolor" id="color" placeholder="Color"/>
+            <button type="submit">Update</button>
+        </form>
+        
+    </body>
+</html>
+
+

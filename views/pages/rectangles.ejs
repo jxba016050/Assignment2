@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/rectangles.css" />
+</head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Rectangles</h2>
+
+        <table>
+            <tr>
+                <th> </th>
+                <th>name</th>
+                <th>color</th>
+            </tr>
+            <% results.rows.forEach(function(get) { %>
+                <form action="/subpage" method="get">
+                    <tr>
+                        <td></td>
+                        <td><input style="width:60px; height:40px;" name="name" type="submit" value="<%= get.name %>"></td>
+                        <td><%= get.color %><input name="color" type="hidden" value="<%= get.color %>"></td>
+                        <td><input name="width" type="hidden" value="<%= get.width %>"></td>
+                        <td><input name="height" type="hidden" value="<%= get.height %>"></td>
+                    </tr>
+                </form>
+                <% }); %>
+        </table>
+
+        <br>
+        <h2>Add New Data</h2>
+
+        <form action="/rectangles" method="post">
+            <input type="text" name="getname" id="name" placeholder="Name"/>
+            <input type="text" name="getwidth" id="width" placeholder="Width"/>
+            <input type="text" name="getheight" id="height" placeholder="Height"/>
+            <input type="text" name="getcolor" id="color" placeholder="Color"/>
+            <br><br>
+            <button type="submit">Add To Database</button>
+        </form>
+        
+    </body>
+</html>

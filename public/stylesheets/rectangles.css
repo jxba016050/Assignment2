@@ -1,0 +1,83 @@
+body {
+    background-color: #ffffff;
+    margin-top: 0px;
+    padding-left: 55px;
+    padding-right: 55px;
+    counter-reset: Serial
+}
+
+div.border {
+    padding-top: 45px;
+    padding-bottom: 35px;
+    padding-left: 25px;
+    background-color: white;
+    margin-right: 5px;
+}
+
+div.body {
+    width: 970px;
+    background-color: #e9eff1;
+    padding: 15px;
+    padding-bottom: 50px;
+    padding-right: 2px;
+    border: 2px ;
+}
+
+th {
+    background-color: #DDDDDD;
+    text-align: left;
+}
+
+table,tr,td,th {
+    table-layout: fixed;
+    height: 30px;
+    width: 180px;
+    padding: 5px;
+    border: 2px solid;
+    border-color: #cccccc;
+    border-collapse: collapse;
+    
+}
+tr td:first-child:before
+{
+  counter-increment: Serial;  
+  content: counter(Serial); 
+}
+
+td.per {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 5%;
+}
+
+button {
+    color: white;
+    background-color: #cc0633;
+    border-style: hidden;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    height: 35px;
+    width: 120px;
+    margin: 7px;
+    margin-left: 0px;       
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+span.left_side {
+    float: left;
+}
+
+span.right_side {
+    float: right;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}

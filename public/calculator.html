@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zhe's Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/calculator.css"/>
+    <script type="text/javascript" src="calculator.js"defer></script>
+</head>
+<body>
+    <div style="background-color: #414446">&nbsp;</div>
+    <div class="border">
+    <h1>Grade Calculator</h1>
+    <div class="body">
+    <h2 style="color:#cc0633">Activities</h2>
+    <p>Give grades to the numeric activities:</p><br>
+    <table id="format" >
+        <tr>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Weight</th>
+            <th>Grade</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>Activity 1</td>
+            <td>A1</td>
+            <td><input id="1weight" type="number"></td>
+            <td><input id="1num"   type="number" onkeydown="calculate()" onkeyup="calculate()"> / <input id="1deno" type="number" onkeydown="calculate()" onkeyup="calculate()"></td>
+            <td id="percentage1" class="per">
+        </tr>
+        <tr>
+            <td>Activity 2</td>
+            <td>A2</td>
+            <td><input id="2weight" type="number"></td>
+            <td><input id="2num"   type="number" onkeydown="calculate()" onkeyup="calculate()"> / <input id="2deno" type="number" onkeydown="calculate()" onkeyup="calculate()"></td>
+            <td id="percentage2" class="per">
+        </tr>
+        <tr>
+            <td>Activity 3</td>
+            <td>A3</td>
+            <td><input id="3weight" type="number"></td>
+            <td><input id="3num"   type="number" onkeydown="calculate()" onkeyup="calculate()"> / <input id="3deno" type="number" onkeydown="calculate()" onkeyup="calculate()"></td>
+            <td id="percentage3" class="per">
+        </tr>
+        <tr>
+            <td>Activity 4</td>
+            <td>A4</td>
+            <td><input id="4weight" type="number"></td>
+            <td><input id="4num"   type="number" onkeydown="calculate()" onkeyup="calculate()"> / <input id="4deno" type="number" onkeydown="calculate()" onkeyup="calculate()"></td>
+            <td id="percentage4" class="per">
+        </tr>
+    </table><br>
+    <span class="left_side">
+        <button type="button" onclick="addRow()">ADD ACTIVITY </button><br><br>
+        <b style="color:#cc0633;">Result</b><td id="total_per" class="per"><br>
+        <b id="total_per" class="per">
+    </span><br><br><br><br><br>
+    <span class="right_side">
+        <button type="button" onclick="weighted()">WEIGHTED</button>
+        <button type="button" onclick="mean()">MEAN</button>
+    </span>
+    </div>
+    </div>
+    <div style="background-color: #414446;height:45px;">&nbsp;</div>
+</body>
+</html>
